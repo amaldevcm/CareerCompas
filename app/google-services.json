@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "566674262324",
+    "project_id": "career-gudidence-app",
+    "storage_bucket": "career-gudidence-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566674262324:android:160053fdd7a408af9e3d61",
+        "android_client_info": {
+          "package_name": "com.example.careergudidenceapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "566674262324-oorqcfiga2jajst2nnmhacvpr4dkecqa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYHBm6lSJMpXxpjGrXmXVAuxlhMpFFG_A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "566674262324-oorqcfiga2jajst2nnmhacvpr4dkecqa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
