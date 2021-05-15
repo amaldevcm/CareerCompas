@@ -47,8 +47,36 @@
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:orientation="vertical"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"></LinearLayout>
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/book_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textColor="#171717"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/book_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Description"
+            android:textColor="#171717"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/book_auth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Author"
+            android:textColor="#171717"
+            android:textSize="18sp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

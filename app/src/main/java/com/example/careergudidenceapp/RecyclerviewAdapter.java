@@ -48,6 +48,15 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                 }
+
+                else if(list.get(position).getType() == "book"){
+                    Intent intent = new Intent(context,BookActivity.class);
+                    intent.putExtra("Course",list.get(position).getCourse());
+                    intent.putExtra("Book",list.get(position).getTitle());
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+                }
+
                 else{
                     Intent intent = new Intent(context,SubjectActivity.class);
                     intent.putExtra("Course",list.get(position).getCourse());
