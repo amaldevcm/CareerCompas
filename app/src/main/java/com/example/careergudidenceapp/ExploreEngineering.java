@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 public class ExploreEngineering extends AppCompatActivity {
     CardView cse, mech, auto, civil, eee, ece, mec, ce;
@@ -26,6 +29,7 @@ public class ExploreEngineering extends AppCompatActivity {
         cse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                cse.setCardElevation(20);
                 Intent intent = new Intent(ExploreEngineering.this,ComputerScience.class);
                 intent.putExtra("Degree", "Engineering");
                 intent.putExtra("Stream","CSE");
