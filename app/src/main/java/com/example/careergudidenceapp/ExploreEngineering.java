@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class ExploreEngineering extends AppCompatActivity {
-    CardView cse, mech, auto, civil, eee, ece;
+    CardView cse, mech, auto, civil, eee, ece, mec, ce;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +20,8 @@ public class ExploreEngineering extends AppCompatActivity {
         civil = (CardView) findViewById(R.id.civil);
         eee = (CardView) findViewById(R.id.eee);
         ece = (CardView) findViewById(R.id.ece);
+        mec = (CardView) findViewById(R.id.mec);
+        ce = (CardView) findViewById(R.id.ce);
 
         cse.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,6 +79,26 @@ public class ExploreEngineering extends AppCompatActivity {
                 Intent intent = new Intent(ExploreEngineering.this,ComputerScience.class);
                 intent.putExtra("Degree", "Engineering");
                 intent.putExtra("Stream","ECE");
+                startActivity(intent);
+            }
+        });
+
+        ce.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ExploreEngineering.this,ComputerScience.class);
+                intent.putExtra("Degree", "Engineering");
+                intent.putExtra("Stream","CE");
+                startActivity(intent);
+            }
+        });
+
+        mec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ExploreEngineering.this,ComputerScience.class);
+                intent.putExtra("Degree", "Engineering");
+                intent.putExtra("Stream","MEC");
                 startActivity(intent);
             }
         });
