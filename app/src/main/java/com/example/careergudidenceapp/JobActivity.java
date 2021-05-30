@@ -31,6 +31,11 @@ public class JobActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_job);
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
 
         Intent intent = getIntent();
         String course = intent.getStringExtra("Course");

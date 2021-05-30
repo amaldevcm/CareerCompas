@@ -24,6 +24,11 @@ public class Profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
 
         editprof = (Button) findViewById(R.id.editProfile);
         editpass = (Button) findViewById(R.id.changepass);

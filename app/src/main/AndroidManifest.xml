@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CareerGudidenceApp">
-        <activity android:name=".BookActivity"></activity>
+
+        <activity android:name=".BookActivity" />
         <activity android:name=".EditProfile" />
         <activity android:name=".ForgetPassword" />
         <activity android:name=".HomePage" />
@@ -19,7 +20,8 @@
         <activity android:name=".SubjectActivity" />
         <activity android:name=".JobActivity" />
         <activity android:name=".ComputerScience" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

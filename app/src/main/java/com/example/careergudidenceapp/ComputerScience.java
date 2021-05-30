@@ -34,7 +34,14 @@ public class ComputerScience extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
+
         setContentView(R.layout.activity_computer_science);
+
 
         job = (RecyclerView) findViewById(R.id.jobList);
         subject = (RecyclerView) findViewById(R.id.SubjectList);

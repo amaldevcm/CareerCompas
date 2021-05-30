@@ -16,6 +16,11 @@ public class ExploreEngineering extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_explore_engineering);
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
 
         cse = (CardView) findViewById(R.id.cse);
         mech = (CardView) findViewById(R.id.mech);
