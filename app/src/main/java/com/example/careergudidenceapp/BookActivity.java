@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -20,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class BookActivity extends AppCompatActivity {
     TextView bname, bauth;
-//    ImageView bimg;
+    ImageView bimg;
     Intent i;
     DatabaseReference ref;
     @Override
@@ -37,7 +39,7 @@ public class BookActivity extends AppCompatActivity {
 
         bname= (TextView) findViewById(R.id.book_name);
         bauth = (TextView) findViewById(R.id.book_auth);
-//        bimg = (ImageView) findViewById(R.id.book_img);
+        bimg = (ImageView) findViewById(R.id.book_img);
 
         String course = i.getStringExtra("Course");
         String book = i.getStringExtra("Book");
@@ -50,6 +52,13 @@ public class BookActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 bname.setText(snapshot.child("Title").getValue().toString());
                 bauth.setText(snapshot.child("Author").getValue().toString());
+                RequestOptions options = new RequestOptions()
+                        .placeholder(R.mipmap.ic_launcher_round)
+                        .error(R.mipmap.ic_launcher_round);
+
+
+
+                Glide.with(BookActivity.this).load(snapshot.child("Image").getValue().toString()).apply(options).into(bimg);
             }
 
             @Override
