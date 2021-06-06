@@ -43,5 +43,14 @@ public class HomePage extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(HomePage.this, Faq.class);
+//                i.putExtra("position", profilePosition);
+                startActivity(i);
+            }
+        });
     }
 }

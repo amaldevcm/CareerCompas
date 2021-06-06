@@ -118,7 +118,7 @@ public class ForgetPassword extends AppCompatActivity {
                         });
                     }
                     else{
-                        Snackbar.make(view, "Password Missmatch", 500).show();
+                        Snackbar.make(view, "Password Miss match", 500).show();
                     }
                 }
             }
