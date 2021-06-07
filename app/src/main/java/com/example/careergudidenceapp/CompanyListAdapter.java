@@ -18,6 +18,7 @@ public class CompanyListAdapter  extends RecyclerView.Adapter<CompanyListAdapter
     List<CompanyItem> list;
     Context context;
 
+
     public CompanyListAdapter(List<CompanyItem> list, Context context) {
         this.list = list;
         this.context = context;
@@ -39,14 +40,16 @@ public class CompanyListAdapter  extends RecyclerView.Adapter<CompanyListAdapter
         holder.name.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ViewGroup.LayoutParams layoutParams = holder.salary.getLayoutParams();
+                ViewGroup.LayoutParams layoutParams = holder.salaryLayout.getLayoutParams();
                 if(layoutParams.width == LinearLayout.LayoutParams.WRAP_CONTENT) {
                     layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT;
+                    holder.salary.getLayoutParams().width = ViewGroup.LayoutParams.WRAP_CONTENT;
                 }
                 else{
                     layoutParams.width = LinearLayout.LayoutParams.WRAP_CONTENT;
+                    holder.salary.getLayoutParams().width = 0;
                 }
-                holder.salary.setLayoutParams(layoutParams);
+                holder.salaryLayout.setLayoutParams(layoutParams);
             }
         });
 
@@ -60,12 +63,13 @@ public class CompanyListAdapter  extends RecyclerView.Adapter<CompanyListAdapter
     public class RecyclerViewHolder extends RecyclerView.ViewHolder{
         private TextView name;
         private TextView salary;
+        private LinearLayout salaryLayout;
 
         public RecyclerViewHolder(@NonNull View itemView) {
             super(itemView);
-
             name = itemView.findViewById(R.id.company_name);
             salary = itemView.findViewById(R.id.company_salary);
+            salaryLayout = itemView.findViewById(R.id.layout_salary);
         }
     }
 }

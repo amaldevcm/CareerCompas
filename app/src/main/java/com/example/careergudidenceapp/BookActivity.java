@@ -45,7 +45,7 @@ public class BookActivity extends AppCompatActivity {
 
         String course = i.getStringExtra("Course");
         String book = i.getStringExtra("Book");
-        final String[] url = new String[0];
+        final String[] url = new String[1];
 
         ref = FirebaseDatabase.getInstance().getReference("Stream").child("Engineering").child(course).child("Book").child(book);
         Query q = ref;

@@ -146,7 +146,7 @@ public class ComputerScience extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot data : snapshot.getChildren()){
-                    CompanyItem item = new CompanyItem(data.getValue().toString(), "0");
+                    CompanyItem item = new CompanyItem(data.child("Title").getValue().toString(), data.child("Salary").getValue().toString());
                     companylist.add(item);
                 }
                 cadapter.notifyDataSetChanged();
