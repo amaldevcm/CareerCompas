@@ -9,6 +9,21 @@
     android:padding="10dp"
     tools:context=".CreateAccount">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:textColor="#4A97E3"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/divider8"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="30dp"
+        android:background="#4A97E3" />
+
     <EditText
         android:id="@+id/acc_name"
         android:layout_width="match_parent"
@@ -29,7 +44,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/edittext_design"
-        android:drawableLeft="@android:drawable/ic_dialog_email"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Email"
@@ -44,7 +58,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/edittext_design"
-        android:drawableLeft="@android:drawable/ic_menu_call"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Phone Number"
@@ -59,7 +72,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/edittext_design"
-        android:drawableLeft="@android:drawable/ic_lock_idle_lock"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Password"
@@ -74,7 +86,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/edittext_design"
-        android:drawableLeft="@android:drawable/ic_lock_idle_lock"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Re-Type Password"
