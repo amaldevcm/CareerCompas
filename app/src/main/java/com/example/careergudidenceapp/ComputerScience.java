@@ -25,7 +25,7 @@ public class ComputerScience extends AppCompatActivity {
     TextView title, starter_salary, mid_salary, senior_salary;
 
     List<ListItems> joblist = new ArrayList<ListItems>();
-    List<ListItems> subjectlist = new ArrayList<ListItems>();
+//    List<ListItems> subjectlist = new ArrayList<ListItems>();
     List<CompanyItem> companylist = new ArrayList<CompanyItem>();
     List<ListItems> booklist = new ArrayList<>();
 
@@ -44,7 +44,7 @@ public class ComputerScience extends AppCompatActivity {
 
 
         job = (RecyclerView) findViewById(R.id.jobList);
-        subject = (RecyclerView) findViewById(R.id.SubjectList);
+//        subject = (RecyclerView) findViewById(R.id.SubjectList);
         book = (RecyclerView) findViewById(R.id.bookList);
         company = (RecyclerView) findViewById(R.id.companyList);
 
@@ -63,23 +63,23 @@ public class ComputerScience extends AppCompatActivity {
 
 //       Getting data from firebase and setting data in recyclerView
         LinearLayoutManager layoutManager1 = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
-        LinearLayoutManager layoutManager2 = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
+//        LinearLayoutManager layoutManager2 = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
         LinearLayoutManager layoutManager3 = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         LinearLayoutManager layoutManager4 = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
 
         job.setLayoutManager(layoutManager1);
-        subject.setLayoutManager(layoutManager2);
+//        subject.setLayoutManager(layoutManager2);
         company.setLayoutManager(layoutManager3);
         book.setLayoutManager(layoutManager4);
 
         RecyclerviewAdapter jobadapter = new RecyclerviewAdapter(joblist,this.getApplicationContext());
-        RecyclerviewAdapter subadapter = new RecyclerviewAdapter(subjectlist,this.getApplicationContext());
+//        RecyclerviewAdapter subadapter = new RecyclerviewAdapter(subjectlist,this.getApplicationContext());
         CompanyListAdapter cadapter = new CompanyListAdapter(companylist,this.getApplicationContext());
         RecyclerviewAdapter bookadapter = new RecyclerviewAdapter(booklist,this.getApplicationContext());
 
         Query q = ref.child("Title");
         Query q1 = ref.child("Job");
-        Query q2 = ref.child("Subject");
+//        Query q2 = ref.child("Subject");
         Query q5 = ref.child("Salary");
         Query q3 = ref.child("Company");
         Query q4 = ref.child("Book");
@@ -126,19 +126,19 @@ public class ComputerScience extends AppCompatActivity {
         });
 
 //      Adding items into Subject list
-        q2.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot data: snapshot.getChildren()){
-                    ListItems item2 = new ListItems(R.drawable.books, data.child("Title").getValue().toString(), "subject",course);
-                    subjectlist.add(item2);
-                }
-                subadapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) { }
-        });
+//        q2.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                for(DataSnapshot data: snapshot.getChildren()){
+//                    ListItems item2 = new ListItems(R.drawable.books, data.child("Title").getValue().toString(), "subject",course);
+//                    subjectlist.add(item2);
+//                }
+//                subadapter.notifyDataSetChanged();
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) { }
+//        });
 
 
 //       Adding items into Company list
@@ -177,7 +177,7 @@ public class ComputerScience extends AppCompatActivity {
 
 //        Setting adapter
         job.setAdapter(jobadapter);
-        subject.setAdapter(subadapter);
+//        subject.setAdapter(subadapter);
         company.setAdapter(cadapter);
         book.setAdapter(bookadapter);
     }
